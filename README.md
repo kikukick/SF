@@ -1,4 +1,4 @@
-```markdown
+```yaml
 ===概要===
 参加者は配布プリントに沿って下記の手順で「擬似クッキーハッキング→成りすましログイン」を体験し、セキュリティの基本を学びます。
 # CMD:0（初心者モード）
@@ -17,7 +17,7 @@ install → pip install hackkit
 crack   → src ~/attack/model/bruteforce/0000-9999
 login   → src use sessionid=<correct_pin>
 unlock  → cookie print from date library===操作手順===
-保護者役がアカウントを作成（入力はローカルaccounts.txtへ追記）。
+保護者役がアカウントを作成
 参加者に交代し、ターミナルでモードを指定して起動：
 python start.py --set 0   # 初心者モード
 python start.py --set 1   # 上級者モード
