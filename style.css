@@ -1,0 +1,84 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #111, #222, #111, #222);
+  background-size: 400% 400%;
+  animation: gradientShift 30s ease infinite;
+  color: #eee;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.video-container {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.video-container video {
+  width: 100%;
+  display: block;
+}
+
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(20,20,20,0.8);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+.content-container ins {
+  display: inline-block;
+  border-bottom: 3px solid #f0c000;
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.content-container h2 {
+  margin-top: 24px;
+  font-size: 1.3em;
+  color: #f0c000;
+}
+.content-container h3 {
+  margin-top: 16px;
+  font-size: 1.1em;
+  color: #ccc;
+}
+.content-container p {
+  margin: 12px 0;
+}
+.content-container ul {
+  margin: 12px 0 12px 20px;
+  list-style-type: disc;
+}
+.cmd-list {
+  list-style-type: none;
+}
+.cmd-list li {
+  margin: 8px 0;
+}
+.cmd-list code {
+  background: rgba(255,255,255,0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+pre {
+  background: rgba(255,255,255,0.05);
+  padding: 12px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
