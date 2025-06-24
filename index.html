@@ -40,6 +40,11 @@
       <li><code>login</code>   → src use sessionid=&lt;correct_pin&gt;</li>
       <li><code>unlock</code>  → cookie print from date library</li>
     </ul>
+    <h2>共通コマンド</h2>
+    <ul class="cmd-list">
+　　　 <li><code>次の答え</code>  → help(またはhelp!)</li>
+　　　 <li><code>ほぼデバッグ用なんで使わないで</code>  → skip</li>
+    </ul>  
 
     <h2>===操作手順===</h2>
     <p>保護者役がアカウントを作成後、参加者に交代し、ターミナルでモードを指定して起動：</p>
@@ -55,6 +60,7 @@ python start.py --set 1   ## 上級者モード
     <h3>必要環境</h3>
     <ul>
       <li>macOS 15.5以上</li>
+      <li>Winは知りません。動くんじゃね。てか動いてくれ。</li>
       <li>Python 3.x</li>
       <li><code>pip install flask</code></li>
     </ul>
@@ -64,7 +70,7 @@ python start.py --set 0   ## 初心者モード
     </code></pre>
     <p>Flaskベースのローカルサーバー（127.0.0.1）で動作。Python 3.x以降対応。</p>
 
-    <h2>#===安全性と合法性===</h2>
+    <h2>===安全性と合法性===</h2>
     <ul>
       <li>すべてローカル環境（外部通信なし）で完結</li>
       <li>実データ・実ユーザー情報は使用せず、擬似データのみ</li>
