@@ -1,1 +1,78 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>擬似ハッキング体験</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="video-container">
+    <video controls autoplay muted loop>
+      <source src="https://raw.githubusercontent.com/kikukick/SF/main/hack.mp4" type="video/mp4">
+      お使いのブラウザでは動画タグがサポートされていません。
+    </video>
+  </div>
 
+  <div class="content-container">
+    <ins>**概要**</ins>
+    <p>参加者は配布プリントに沿って下記の手順で「擬似クッキーハッキング→成りすましログイン」を体験し、セキュリティの基本を学びます。</p>
+
+    <h2>CMD:0（初心者モード）</h2>
+    <ul class="cmd-list">
+      <li><code>start</code>   → start cookie</li>
+      <li><code>visit</code>   → open page</li>
+      <li><code>get</code>     → get cookie</li>
+      <li><code>install</code> → install brute</li>
+      <li><code>crack</code>   → crack pin</li>
+      <li><code>login</code>   → login id=&lt;correct_pin&gt;</li>
+      <li><code>unlock</code>  → output cookie</li>
+    </ul>
+
+    <h2>CMD:1（上級者モード）</h2>
+    <ul class="cmd-list">
+      <li><code>start</code>   → src cookies-output-attack go</li>
+      <li><code>visit</code>   → src file://public_resource?id=875</li>
+      <li><code>get</code>     → src get cookies-for-id=875</li>
+      <li><code>install</code> → pip install hackkit</li>
+      <li><code>crack</code>   → src ~/attack/model/bruteforce/0000-9999</li>
+      <li><code>login</code>   → src use sessionid=&lt;correct_pin&gt;</li>
+      <li><code>unlock</code>  → cookie print from date library</li>
+    </ul>
+
+    <h2>===操作手順===</h2>
+    <p>保護者役がアカウントを作成後、参加者に交代し、ターミナルでモードを指定して起動：</p>
+    <pre><code>
+python start.py --set 0   ## 初心者モード
+python start.py --set 1   ## 上級者モード
+    </code></pre>
+    <p><code>help</code> または <code>help!</code> で次のコマンドを確認しながら順次実行。<br>
+    <code>install → crack → login</code> で擬似ブルートフォース体験。<br>
+    <code>unlock</code> で得たクッキー情報をフォームに入力し、ログイン成功！</p>
+
+    <h2>===動作確認と互換について===</h2>
+    <h3>必要環境</h3>
+    <ul>
+      <li>macOS 15.5以上</li>
+      <li>Python 3.x</li>
+      <li><code>pip install flask</code></li>
+    </ul>
+    <h3>サーバー起動例</h3>
+    <pre><code>
+python start.py --set 0   ## 初心者モード
+    </code></pre>
+    <p>Flaskベースのローカルサーバー（127.0.0.1）で動作。Python 3.x以降対応。</p>
+
+    <h2>#===安全性と合法性===</h2>
+    <ul>
+      <li>すべてローカル環境（外部通信なし）で完結</li>
+      <li>実データ・実ユーザー情報は使用せず、擬似データのみ</li>
+      <li>学習目的の体験演出であり、外部攻撃は一切行いません</li>
+      <li>バックドアなんて仕込んでないよ</li>
+      <li>XSSもないよ</li>
+      <li>信じろ！知らんけど</li>
+    </ul>
+  </div>
+</body>
+</html>
